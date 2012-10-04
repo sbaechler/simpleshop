@@ -2,16 +2,16 @@ Simple Shop
 ===========
 
 A very basic shop for FeinCMS_ that can be included as application content.
-It's currently only single-page for recommended for <20 items.
+It's currently only single-page and recommended for shops with less than 20 items.
 It's powered by Plata_.
 
 Requirements:
 
- * `django-orderable <https://github.com/tkaemming/django-orderable>`_,
- * pdfdocument
- * reportlab
- * FeinCMS_
- * Plata_
+* `django-orderable <https://github.com/tkaemming/django-orderable>`_,
+* pdfdocument
+* reportlab
+* FeinCMS_
+* Plata_
 
 .. _FeinCMS: https://github.com/matthiask/feincms
 .. _Plata: https://github.com/sbaechler/plata
