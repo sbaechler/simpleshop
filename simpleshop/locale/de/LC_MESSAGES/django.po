@@ -1,0 +1,345 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-02 19:24+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: content.py:17
+#, fuzzy
+msgid "Product teaser"
+msgstr "Produkte"
+
+#: content.py:18
+#, fuzzy
+msgid "Product teasers"
+msgstr "Produkte"
+
+#: models.py:28
+msgid "Mr"
+msgstr "Herr"
+
+#: models.py:29
+msgid "Ms"
+msgstr "Frau"
+
+#: models.py:33 models.py:35 models.py:91
+msgid "salutation"
+msgstr "Anrede"
+
+#: models.py:45
+msgid "is active"
+msgstr "aktiv"
+
+#: models.py:46
+msgid "name"
+msgstr "Name"
+
+#: models.py:47
+msgid "slug"
+msgstr "Slug"
+
+#: models.py:49
+msgid "intro description"
+msgstr "Beschreibung Einleitung"
+
+#: models.py:50
+msgid "description"
+msgstr "Beschreibung"
+
+#: models.py:51
+msgid "image"
+msgstr "Bild"
+
+#: models.py:56 templates/plata/shop_cart.html:21
+msgid "product"
+msgstr "Produkt"
+
+#: models.py:57
+msgid "products"
+msgstr "Produkte"
+
+#: models.py:88
+msgid "user"
+msgstr "Benutzer"
+
+#: models.py:93
+msgid "company"
+msgstr "Firma"
+
+#: models.py:94
+msgid "first name"
+msgstr "Vorname"
+
+#: models.py:95
+msgid "last name"
+msgstr "Nachname"
+
+#: models.py:96
+msgid "address"
+msgstr "Adresse"
+
+#: models.py:97
+msgid "ZIP code"
+msgstr "PLZ"
+
+#: models.py:98
+msgid "city"
+msgstr "Ort"
+
+#: models.py:99
+msgid "notes"
+msgstr "Bemerkungen"
+
+#: models.py:100
+msgid "created"
+msgstr "Erstellt"
+
+#: models.py:103
+msgid "contact"
+msgstr "Kontakt"
+
+#: models.py:104
+msgid "contacts"
+msgstr "Kontakte"
+
+#: views.py:46
+msgid "create account"
+msgstr "Neuer Account"
+
+#: views.py:74 templates/plata/shop_cart.html:23
+msgid "quantity"
+msgstr "Anzahl"
+
+#: views.py:89
+msgid "The cart has been updated."
+msgstr "Der Warenkorb wurde aktualisiert."
+
+#: templates/_form_errors.html:3
+msgid "Please correct the following errors:"
+msgstr "Bitte korrigieren Sie die folgenden Fehler:"
+
+#: templates/_form_errors.html:7 templates/_form_errors.html.py:23
+msgid "Form errors"
+msgstr "Fehler"
+
+#: templates/_form_item_terms.html:6
+msgid "I agree to the"
+msgstr "Ich akzeptiere die"
+
+#: templates/_form_item_terms.html:6
+msgid "/de/shop/agbs/"
+msgstr "/de/shop/agbs/"
+
+#: templates/_form_item_terms.html:6
+msgid "terms and conditions"
+msgstr "allgemeinen Geschäftsbedingungen"
+
+#: templates/plata/_order_overview.html:12
+msgid "Shipping address"
+msgstr "Lieferadresse"
+
+#: templates/plata/_order_overview.html:18
+msgid "Order items"
+msgstr "Bestellte Aktikel"
+
+#: templates/plata/_order_overview.html:30
+#: templates/plata/shop_discounts.html:5
+msgid "Discounts"
+msgstr "Rabatte"
+
+#: templates/plata/_order_overview.html:43
+msgid "No discounts"
+msgstr "Keine Rabatte"
+
+#: templates/plata/_order_overview.html:47
+msgid "Total"
+msgstr "Total"
+
+#: templates/plata/_order_overview.html:51
+msgid "subtotal"
+msgstr "Zwischensumme"
+
+#: templates/plata/_order_overview.html:57
+msgid "discount"
+msgstr "Rabatt"
+
+#: templates/plata/_order_overview.html:63
+msgid "tax"
+msgstr "MwSt"
+
+#: templates/plata/_order_overview.html:68
+msgid "total"
+msgstr "Summe"
+
+#: templates/plata/_order_overview.html:73
+msgid "of which tax"
+msgstr "davon MwSt"
+
+#: templates/plata/_order_progress.html:3 templates/plata/shop_cart.html:5
+#: templates/plata/shop_cart.html.py:13
+#: templates/plata/shop_order_payment_failure.html:11
+msgid "Cart"
+msgstr "Warenkorb"
+
+#: templates/plata/_order_progress.html:4
+msgid "Address"
+msgstr "Adresse"
+
+#: templates/plata/_order_progress.html:5
+#: templates/plata/shop_discounts.html:9
+msgid "Vouchers"
+msgstr "Gutscheincode"
+
+#: templates/plata/_order_progress.html:6
+msgid "Payment"
+msgstr "Bezahlung"
+
+#: templates/plata/shop_cart.html:9
+msgid "Cart is empty!"
+msgstr "Der Warenkorb ist leer!"
+
+#: templates/plata/shop_cart.html:22
+msgid "unit price"
+msgstr "Einzelpreis"
+
+#: templates/plata/shop_cart.html:24
+msgid "line item price"
+msgstr "Gesamtpreis"
+
+#: templates/plata/shop_cart.html:25
+msgid "Delete"
+msgstr "Löschen"
+
+#: templates/plata/shop_cart.html:43
+msgid "Update cart"
+msgstr "Warenkorb neu berechnen"
+
+#: templates/plata/shop_cart.html:44 templates/plata/shop_checkout.html:5
+#: templates/plata/shop_checkout.html:9
+msgid "Checkout"
+msgstr "Zur Kasse"
+
+#: templates/plata/shop_cart.html:45
+msgid "Continue shopping"
+msgstr "Weiter einkaufen"
+
+#: templates/plata/shop_checkout.html:12
+msgid "If you already have an account, you can log in here"
+msgstr "Wenn sie bereits einen Account haben, können Sie sich hier einloggen"
+
+#: templates/plata/shop_checkout.html:17
+msgid "Email"
+msgstr "Email"
+
+#: templates/plata/shop_checkout.html:18
+msgid "Password"
+msgstr "Passwort"
+
+#: templates/plata/shop_checkout.html:19
+msgid "Sign in"
+msgstr "Einloggen"
+
+#: templates/plata/shop_checkout.html:22
+msgid "Otherwise please enter your address:"
+msgstr "Ansonsten geben Sie bitte ihre Adresse an:"
+
+#: templates/plata/shop_checkout.html:24
+msgid "Please enter your address:"
+msgstr "Bitte geben Sie Ihre Adresse an:"
+
+#: templates/plata/shop_checkout.html:46
+msgid "Submit"
+msgstr "Abschicken"
+
+#: templates/plata/shop_confirmation.html:5
+#: templates/plata/shop_confirmation.html:9
+msgid "Order summary"
+msgstr "Ihre Bestellung"
+
+#: templates/plata/shop_confirmation.html:14
+msgid "Payment and order confirmation"
+msgstr "Bestätigung"
+
+#: templates/plata/shop_confirmation.html:19
+msgid "Proceed to payment"
+msgstr "Bezahlen"
+
+#: templates/plata/shop_discounts.html:12
+msgid "Voucher code"
+msgstr "Gutscheincode"
+
+#: templates/plata/shop_discounts.html:18
+msgid "Add voucher"
+msgstr "Gutschein hinzufügen"
+
+#: templates/plata/shop_discounts.html:19
+msgid "Proceed to confirmation"
+msgstr "Zur Bestätigug"
+
+#: templates/plata/shop_order_payment_failure.html:6
+#: templates/plata/shop_order_payment_failure.html:9
+msgid "Order payment failure"
+msgstr "Fehler bei der Bezahlung"
+
+#: templates/plata/shop_order_payment_failure.html:13
+msgid "Create new order"
+msgstr "Neue Bestellung"
+
+#: templates/plata/shop_order_success.html:5
+msgid "Order successful"
+msgstr "Bestellung erfolgreich"
+
+#: templates/plata/shop_order_success.html:9
+msgid "Thank you for shopping with us!"
+msgstr "Danke, dass Sie bei uns eingekauft haben."
+
+#: templates/plata/shop_order_success.html:13
+msgid "Order has been partially paid."
+msgstr "Bestellung zum Teil bezahlt."
+
+#: templates/plata/shop_order_success.html:15
+msgid "Order has been confirmed."
+msgstr "Bestellung bestätigt."
+
+#: templates/plata/shop_order_success.html:17
+msgid ""
+"As soon as we receive a confirmation from the payment provider, you'll be "
+"sent a confirmation e-mail."
+msgstr ""
+"Sobald wir die Bestätigung der Bezahlung von unserem Dienstleister erhalten "
+"haben, werden wir Ihnen eine Bestätigungsmail schicken."
+
+#: templates/plata/shop_order_success.html:21
+msgid "Back to list"
+msgstr "Zurück zur Liste"
+
+#: templates/plata/shop_order_success.html:22
+msgid "print"
+msgstr "Drucken"
+
+#: templates/product/product.html:10
+msgid "add to cart"
+msgstr "in den Warenkorb"
+
+#: templates/product/product_list.html:14
+msgid "Shopping cart"
+msgstr "Warenkorb"
+
+#~ msgid "Billing address"
+#~ msgstr "Rechnungsadresse"
+
+#~ msgid "Add to cart"
+#~ msgstr "In den Warenkorb"

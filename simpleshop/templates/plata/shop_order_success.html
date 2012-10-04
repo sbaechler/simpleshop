@@ -1,0 +1,23 @@
+{% extends base_template|default:"base.html" %}
+
+{% load i18n plata_tags applicationcontent_tags %}
+
+{% block title %}{% trans "Order successful" %} - {{ block.super }}{% endblock %}
+
+{% block main %}
+{% if not order.balance_remaining %}
+    <h1>{% trans "Thank you for shopping with us!" %}</h1>
+    {# TODO this isn't correct for cash on delivery #}
+{% else %}
+    {% if order.paid %}
+        <h1>{% trans "Order has been partially paid." %}</h1>
+    {% else %}
+        <h1>{% trans "Order has been confirmed." %}</h1>
+    {% endif %}
+    <p>{% trans "As soon as we receive a confirmation from the payment provider, you'll be sent a confirmation e-mail." %}</p>
+{% endif %}
+
+{% include "plata/_order_overview.html" %}
+<a class="btn" href="{% app_reverse "plata_product_list" "simpleshop.urls" %}">{% trans "Back to list" %}</a>
+<a class="btn" href="javascript:window.print()"><i class="icon-print">></i> {% trans 'print' %}</a>
+{% endblock %}

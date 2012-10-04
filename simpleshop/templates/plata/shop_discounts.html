@@ -1,0 +1,22 @@
+{% extends base_template|default:"base.html" %}
+
+{% load i18n plata_tags %}
+
+{% block title %}{% trans "Discounts" %} - {{ block.super }}{% endblock %}
+
+{% block main %}
+{% include 'plata/_order_progress.html' %}
+<h1>{% trans "Vouchers" %}</h1>
+
+<form method="post" action="">{% csrf_token %}
+<h2>{% trans "Voucher code" %}</h2>
+{% form_errors form %}
+
+
+{% form_item form.code %}
+
+<input class="btn" type="submit" name="save" value="{% trans "Add voucher" %}" />
+<input class="btn" type="submit" name="proceed" value="{% trans "Proceed to confirmation" %}" />
+
+</form>
+{% endblock %}

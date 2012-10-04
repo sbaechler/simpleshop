@@ -1,0 +1,9 @@
+*.pyc
+*~
+.*.swp
+\#*#
+.DS_Store
+._*
+/FeinCMS.egg-info
+django_form_designer.egg-info
+/docs/_build

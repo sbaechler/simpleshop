@@ -1,0 +1,48 @@
+{% extends base_template|default:"base.html" %}
+
+{% load i18n plata_tags %}
+
+{% block title %}{% trans "Checkout" %} - {{ block.super }}{% endblock %}
+
+{% block main %}
+{% include 'plata/_order_progress.html' %}
+<h1>{% trans "Checkout" %}</h1>
+
+{% if loginform %}
+<h2>{% trans 'If you already have an account, you can log in here' %}:</h2>
+    <form class="form-inline" method="post" action="">{% csrf_token %}
+    <input type="hidden" name="_login" value="1" />
+    {% form_errors loginform %}
+
+    {% form_item_plain loginform.username form_class="input-small" placeholder=_("Email") %}
+    {% form_item_plain loginform.password form_class="input-small" placeholder=_("Password") %}
+    <button class="btn" type="submit">{% trans "Sign in" %}</button>
+
+    </form>
+<h2>{% trans 'Otherwise please enter your address:' %}</h2>
+{% else %}
+<h2>{% trans 'Please enter your address:' %}</h2>
+{% endif %}
+
+<form method="post" action="">
+{% csrf_token %}
+<input type="hidden" name="_checkout" value="1" />
+
+{% form_errors orderform %}
+
+{% if orderform.create_account %}
+    {% form_item orderform.create_account %}
+{% endif %}
+
+{% form_item orderform.billing_salutation %}
+{% form_item orderform.billing_first_name %}
+{% form_item orderform.billing_last_name %}
+{% form_item orderform.email %}
+{% form_item orderform.billing_address %}
+{% form_item orderform.billing_zip_code %}
+{% form_item orderform.billing_city %}
+
+{% form_item orderform.notes %}
+<button class="btn" type="submit">{% trans "Submit" %}</button>
+</form>
+{% endblock %}

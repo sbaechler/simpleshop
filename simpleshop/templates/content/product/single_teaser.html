@@ -1,0 +1,19 @@
+{% load i18n feincms_thumbnail applicationcontent_tags %}
+<div class="append-bottom" id="product-{{ product.pk }}">
+    <div class="row product-heading relative">
+        <h2 class="span8{% if product.image %} offset1{% endif %}">
+            <a href="{{ product.get_list_url }}" id="a-{{ product.slug }}" name="a{{ product.name }}">{{ product.name }} <small>{{ product.get_price.price_display }}</small></a>
+            <button data-href="{% app_reverse "plata_shop_cart" "simpleshop.urls" %}" type="button" class="btn btn-link order-button" id="order-{{ product.pk }}" title="{% trans 'add to cart' %}" data-toggle="button" data-action="{{ product.get_absolute_url }}" data-token="{{ csrf_token }}"><i class="icon-arrow-right"></i> <i class="icon-shopping-cart"></i></button>
+        </h2>
+        {% if product.image %}
+        <div class="product-image span1 absolute">
+           <a href="{{ product.image.name|thumbnail:'600x600' }}" class="product-link image">
+            <img src="{{ product.image.name|thumbnail:'90x100' }}" alt="" />
+           </a>
+        </div>
+        {% endif %}
+        <div class="product-text span6">
+            {{ product.short_description|safe }}
+        </div>
+    </div>
+</div>

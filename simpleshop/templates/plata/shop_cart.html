@@ -1,0 +1,48 @@
+{% extends base_template|default:"base.html" %}
+
+{% load i18n plata_tags applicationcontent_tags %}
+
+{% block title %}{% trans "Cart" %} - {{ block.super }}{% endblock %}
+
+{% block main %}
+{% if empty %}
+<h1>{% trans "Cart is empty!" %}</h1>
+{% else %}
+{% include 'plata/_order_progress.html' %}
+
+<h1>{% trans "Cart" %}</h1>
+
+<form method="post" action="">{% csrf_token %}{{ orderitemformset.management_form }}
+
+{% form_errors orderitemformset %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th>{% trans "product"|capfirst %}</th>
+        <th class="span2 rightalign">{% trans "unit price"|capfirst %}</th>
+        <th class="span1">{% trans "quantity"|capfirst %}</th>
+        <th class="span1 rightalign">{% trans "line item price"|capfirst %}</th>
+        <th class="span1">{% trans "Delete" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for orderitemform in orderitemformset.forms %}
+    <tr>
+        <td>{{ orderitemform.instance.product }}</td>
+        <td class="span2 rightalign">{{ orderitemform.instance.unit_price|floatformat:2 }}</td>
+        <td class="span1">
+            {{ orderitemform.id }}
+            {% form_item_plain orderitemform.quantity form_class="span1" %}
+        </td>
+        <td class="span1 rightalign">{{ orderitemform.instance.discounted_subtotal|floatformat:2 }}</td>
+        <td class="span1">{% form_item_plain orderitemform.DELETE %}</td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
+    <button class="btn" type="submit" name="save">{% trans "Update cart" %}</button>
+    <button class="btn" type="submit" name="checkout">{% trans "Checkout" %}</button>
+    <a class="btn" href="{% app_reverse "plata_product_list" "simpleshop.urls" %}">{% trans 'Continue shopping' %}</a>
+</form>
+{% endif %}
+{% endblock %}

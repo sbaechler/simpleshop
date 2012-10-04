@@ -1,0 +1,9 @@
+{% load i18n %}
+<div class="control-group {{ additional_classes|default:"" }} {{ item.field.required|yesno:"required," }} {{ item.errors|yesno:"error," }} type-{{ type_class }} field-{{ item.name }}">
+    <div class="controls">
+      <label for="{{ item.auto_id }}" class="checkbox">
+        {{ item }}
+          <label for="{{ item.auto_id }}" class="checkbox inline">{% trans 'I agree to the' %}</label><a class="checkbox inline" href="{% trans '/de/shop/agbs/' %}" target="_blank">{% trans 'terms and conditions' %}</a>
+      </label>
+    </div>
+</div>

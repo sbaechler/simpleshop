@@ -1,0 +1,29 @@
+{% extends 'site_base.html' %}
+{% load i18n applicationcontent_tags %}
+
+{% block uncompressed_css %}
+<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}lib/fancybox/jquery.fancybox-1.3.4.css">
+{% endblock %}
+
+{% block main %}
+<section class="row accordion" id="product-list">
+{% for product in object_list %}
+    {% include 'product/product.html' %}
+{% endfor %}
+
+<a class="btn" href="{% app_reverse "plata_shop_cart" "simpleshop.urls" %}"><i class="icon-shopping-cart"></i> {% trans 'Shopping cart' %}</a>
+</section>
+{% endblock main %}
+
+{% block js %}
+{{ block.super }}
+<script type="text/javascript" src="{{ STATIC_URL }}lib/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}plata/cart.js"></script>
+{% endblock %}
+
+
+{% block uncompressed_js %}
+<script>
+    $('.product-link').fancybox();
+</script>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends base_template|default:"base.html" %}
+
+{% load i18n plata_tags %}
+
+{% block title %}{% trans "Order summary" %} - {{ block.super }}{% endblock %}
+
+{% block main %}
+{% include 'plata/_order_progress.html' %}
+<h1>{% trans "Order summary" %}</h1>
+
+{% include "plata/_order_overview.html" %}
+<section class="order-confirmation">
+    <form method="post" action="">{% csrf_token %}
+    <h2>{% trans "Payment and order confirmation" %}</h2>
+    {% form_errors form %}
+
+    {% form_item_terms form.terms_and_conditions %}
+    {% form_item form.payment_method form_class="span4" %}
+    <button class="btn" type="submit">{% trans "Proceed to payment" %}</button>
+
+    </form>
+</section>
+{% endblock %}

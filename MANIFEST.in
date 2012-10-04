@@ -1,0 +1,8 @@
+include LICENSE
+include MANIFEST.in
+include README.rst
+include requirements.txt
+include setuplib.py
+recursive-include simpleshop/static *
+recursive-include simpleshop/locale *
+recursive-include simpleshop/templates *

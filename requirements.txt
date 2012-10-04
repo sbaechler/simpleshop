@@ -1,0 +1,6 @@
+Django>=1.4
+FeinCMS>=1.5
+pdfdocument==1.3
+reportlab
+-e git://github.com/feinheit/django-orderable.git#egg=orderable
+-e git://github.com/sbaechler/plata.git#egg=plata

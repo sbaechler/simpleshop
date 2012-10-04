@@ -1,0 +1,30 @@
+{% load i18n feincms_thumbnail applicationcontent_tags %}
+<div class="append-bottom span9 accordion-group" id="product-{{ product.pk }}">
+    <div class="accordion-heading row product-heading relative">
+        <h2 class="span8 offset1">
+            {% if product.description %}
+            <a href="#{{ product.slug }}" data-toggle="collapse" data-parent="#product-list" id="a-{{ product.slug }}" name="{{ product.slug }}"><i class="arrow icon-circle-arrow-{% if forloop.first %}down{% else %}right{% endif %}"></i> {{ product.name }} <small>{{ product.get_price.price_display }}</small></a>
+            {% else %}
+            <a name="{{ product.slug }}">{{ product.name }} <small>{{ product.get_price.price_display }}</small></a>
+            {% endif %}
+            <button data-href="{% app_reverse "plata_shop_cart" "simpleshop.urls" %}" type="button" class="btn btn-link order-button" id="order-{{ product.pk }}" title="{% trans 'add to cart' %}" data-toggle="button" data-action="{{ product.get_absolute_url }}" data-token="{{ csrf_token }}"><i class="icon-arrow-right"></i> <i class="icon-shopping-cart"></i></button>
+        </h2>
+        {% if product.image %}
+        <div class="product-image span1 absolute">
+           <a href="{{ product.image.name|thumbnail:'600x600' }}" class="product-link image">
+            <img src="{{ product.image.name|thumbnail:'90x100' }}" alt="" />
+           </a>
+        </div>
+        {% endif %}
+        <div class="product-text offset1 span6">
+            {{ product.short_description|safe }}
+        </div>
+    </div>
+    {% if product.description %}
+    <div class="accordion-body row collapse{% if forloop.first %} in{% endif %}{% if product.image %} withpicture{% endif %}" id="{{ product.slug }}">
+        <div class="product-text offset1 span6">
+            {{ product.description|safe }}
+        </div>
+    </div>
+    {% endif %}
+</div>
