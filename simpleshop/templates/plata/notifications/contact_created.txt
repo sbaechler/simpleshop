@@ -1,4 +1,4 @@
-{{ site.name }}: Account creation successful
+{{ site.name }}: Account creation successful {# The email subject is the first line. Followed by an empty line. #}
 
 You have successfully created an account on our site!
 Go to http://{{ site.domain }}/ and enter the following details:

@@ -1,4 +1,4 @@
-Order completed
+Order completed {# The email subject is the first line. Followed by an empty line. #}
 
 You have successfully confirmed your order.
 

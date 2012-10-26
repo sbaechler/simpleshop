@@ -1,4 +1,4 @@
-Order completed - packing slip
+Order completed - packing slip {# The email subject is the first line. Followed by an empty line. #}
 
 The following order has been successfully completed:
 
