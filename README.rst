@@ -61,3 +61,12 @@ It's recommended that you create your own stationery.
 Just copy the default stationery class ``ExampleStationery`` from
 ``venv/lib/site-packages/pdfdocument/elements.py``
 to a ``stationery`` module in your project folder.
+
+
+Email
+-----
+
+The email templates are in ``templates/plata/notifications``.
+The first line in the template is the email subject. It has to be followed
+by an empty line.
+You can use django template language for the email templates. But no HTML.
