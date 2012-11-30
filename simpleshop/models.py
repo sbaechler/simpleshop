@@ -19,7 +19,7 @@ from .handlers import EmailHandler
 #shop_signals.contact_created.connect(
 #    notifications.ContactCreatedHandler(),
 #    weak=False)
-shop_signals.order_paid.connect(
+shop_signals.order_confirmed.connect(
     EmailHandler(),
     weak=False)
 

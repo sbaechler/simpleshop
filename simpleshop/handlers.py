@@ -17,6 +17,8 @@ class EmailHandler(notifications.BaseHandler):
         try:
             if order.payments.all()[0].payment_module_key == 'cod':
                 cash_on_delivery = True
+                # Mark full amount as upaid on the packaging slip
+                order.paid = 0
         except:
             pass
 
