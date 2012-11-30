@@ -1,7 +1,18 @@
 {% load i18n applicationcontent_tags %}
 <ul class="breadcrumb"><!-- {{ progress }} -->
-  <li {% if progress in 'cart checkout discounts confirmation' %}class="active"{% endif %}><a href="{% app_reverse "plata_shop_cart" "simpleshop.urls" %}">{% trans 'Cart' %}</a> <span class="divider">&gt;</span></li>
-  <li {% if progress in 'checkout discounts confirmation' %}class="active"{% endif %}><a href="{% app_reverse "plata_shop_checkout" "simpleshop.urls" %}">{% trans 'Address' %}</a> <span class="divider">&gt;</span></li>
-  <li {% if progress in 'discounts confirmation' %}class="active"{% endif %}><a href="{% app_reverse "plata_shop_discounts" "simpleshop.urls" %}">{% trans 'Vouchers' %}</a> <span class="divider">&gt;</span></li>
-  <li {% if progress in 'confirmation' %}class="active"{% endif %}><a href="{% app_reverse "plata_shop_confirmation" "simpleshop.urls" %}">{% trans 'Payment' %}</a></li>
+  {% if progress in 'cart checkout discounts confirmation' %}
+    <li class="active"><a href="{% app_reverse "plata_shop_cart" "simpleshop.urls" %}">{% trans 'Cart' %}</a>
+  {% else %}<li>{% trans 'Cart' %}{% endif %} <span class="divider">&gt;</span></li>
+
+  {% if progress in 'checkout discounts confirmation' %}
+    <li class="active"><a href="{% app_reverse "plata_shop_checkout" "simpleshop.urls" %}">{% trans 'Address' %}</a>
+  {% else %}<li>{% trans 'Address' %}{% endif %} <span class="divider">&gt;</span></li>
+
+  {% if progress in 'discounts confirmation' %}
+  <li class="active"><a href="{% app_reverse "plata_shop_discounts" "simpleshop.urls" %}">{% trans 'Vouchers' %}</a>
+  {% else %}<li>{% trans 'Vouchers' %}{% endif %} <span class="divider">&gt;</span></li>
+
+  {% if progress in 'confirmation' %}
+  <li class="active"><a href="{% app_reverse "plata_shop_confirmation" "simpleshop.urls" %}">{% trans 'Payment' %}</a>
+  {% else %}<li>{% trans 'Payment' %}{% endif %}</li>
 </ul>
